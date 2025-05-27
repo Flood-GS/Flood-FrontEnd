@@ -1,0 +1,79 @@
+/* Cenário */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+#jogo{
+  position: relative;
+  background: url('../img/cenario.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 800px;
+  height: 490px;
+  border: 2px solid #444; 
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+
+/*Lixeiras*/
+.lixeiras {
+  position: absolute;
+  bottom: 165px;
+  left: 67%;
+  transform: translateX(-50%);
+  display:flex;
+}
+.lixeira {
+  height: 96px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  position: relative;  
+  z-index: 1;    
+}
+.lixeira:hover {
+  transform: scale(1.1);
+}
+
+.lixos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  pointer-events: all;
+  user-select: none;
+  z-index: 10;
+}
+
+.lixo {
+  position: absolute;
+  height: 70px;
+  pointer-events: all;
+  cursor: grab;
+}
+
+
+#info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255,255,255,0.8);
+  padding: 10px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  z-index: 10;
+}
+#timer {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0f549e;
+}
+#log {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
