@@ -1,0 +1,60 @@
+/*Estrutura básica*/
+body{
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:Helvetica;
+    color: white;
+}
+footer{
+    background-color: #6a7bae68;
+    padding: 5px;
+    color: white;
+    font-size: 17px;
+    font-family:'Lucida Sans';
+    text-align: center;
+    font-weight: bold;
+}
+header img{
+    text-align: left;
+    width: 190px;
+}
+header h1{
+    font-size: 55px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Header*/
+header img{
+    text-align: left;
+    width: 180px;
+  }
+  h1{
+    font-size: 45px;
+    color: rgb(238, 238, 238);
+    font-family:Arial;
+    text-align: right;
+  }
+  #headerr{
+    display: flex;
+    flex-direction: row;
+  }
+  nav ul li{
+    display: flex;
+  }
+  nav ul{
+    display: flex;
+  }
+  a{
+    background-color: #6a7bae68;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+  }

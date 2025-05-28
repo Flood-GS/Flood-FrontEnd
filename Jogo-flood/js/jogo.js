@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (lixoRemovido) lixoRemovido.remove();
 
       if (separados === totalLixos) {
-        finalizarJogo("🎉 Enchente evitada! Você conseguiu a tempo!");
+        finalizarJogo("🎉 Alagamento evitado! Você conseguiu a tempo!");
       }
     } else {
       log.textContent = "❌ Lixo errado! Jogue na lata certa.";
@@ -81,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (tempoRestante <= 0) {
       finalizarJogo(
         separados === totalLixos
-          ? "🎉 Enchente evitada! Você conseguiu a tempo!"
-          : `⏰ Enchente não evitada! Você separou ${separados} de ${totalLixos} lixos. Tente de novo!`
+          ? "🎉 Alagamento evitado! Você conseguiu a tempo!"
+          : `⏰ Alagamento não evitada! Você separou ${separados} de ${totalLixos} lixos. Tente de novo!`
       );
     }
   }, 1000);

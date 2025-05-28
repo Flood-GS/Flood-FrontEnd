@@ -4,6 +4,8 @@ body {
   padding: 0;
   overflow: hidden;
   user-select: none;
+  background-image: url(../../img/background.png);
+  background-size: cover;
 }
 
 #jogo{
@@ -11,8 +13,8 @@ body {
   background: url('../img/cenario.png') no-repeat;
   background-size: cover;
   background-position: center;
-  width: 800px;
-  height: 490px;
+  width: 900px;
+  height: 550px;
   border: 2px solid #444; 
   overflow: hidden;
   margin: 20px auto;
@@ -76,4 +78,61 @@ body {
   margin-top: 5px;
   font-size: 14px;
   font-weight: bold;
+}
+
+/*Estrutura*/
+
+
+/*Header*/
+header img{
+  text-align: left;
+  width: 180px;
+}
+h1{
+  font-size: 45px;
+  color: rgb(238, 238, 238);
+  font-family:Arial;
+  text-align: left;
+}
+#imgtil{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  flex-direction: column;
+
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+a{
+  background-color: #6a7bae68;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  align-items: center;
+}
+nav{
+  background-color:lightblue;
+}
+
+footer{
+  background-color: #6a7bae68;
+  padding: 5px;
+  color: white;
+  font-size: 17px;
+  font-family:'Lucida Sans';
+  text-align: center;
+  font-weight: bold;
+  height: 3em;
 }
