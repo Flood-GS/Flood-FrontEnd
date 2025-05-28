@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,56 +8,65 @@
   <link rel="stylesheet" href="./css/jogo.css" />
   <link rel="icon" href="../img/favicon.ico">
   <script defer src="./js/jogo.js"></script>
+  <script defer src="../js/chatbot.js"></script>
 </head>
+
 <body>
-<header>
-  <img src="../img/logo.png" alt="Logo FLOOD">
-  <div id="imgtil">
-  <h1>Jogo cidade limpa</h1>
-  <nav aria-label="Menu do index">
-    <ul>
-      <li><a href="../index.html" aria-label="Página inicial">Página inicial</a></li>
-      <li><a href="./paginas/info.html" aria-label="Página das informações">Informações</a></li>
-      <li><a href="./paginas/faq.html" aria-label="Página de FAQ">FAQ</a></li>
-      <li><a href="./paginas/integrantes.html" aria-label="Página de Integrantes">Integrantes</a></li>
-      <li><a href="./paginas/ajuda.html" aria-label="Página de Ajuda">Ajuda</a></li>
-    </ul>
-</nav>
-</div>
-</header>
-<main>
-  <div id="jogo">
-    <div id="info">
+  <header>
+    <img src="../img/logo.png" alt="Logo FLOOD-uma casa com água">
+    <div id="imgtil">
+      <h1>Jogo: Cidade limpa</h1>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="../paginas/start.html" aria-label="Voltar para página de start">← Voltar página</a></li>
+          <li><a href="../index.html" aria-label="Ir para a página inicial">Página inicial</a></li>
+          <li><a href="../paginas/info.html" aria-label="Ir para a página das informações">Informações</a></li>
+          <li><a href="../paginas/faq.html" aria-label="Ir para a página de FAQ">FAQ</a></li>
+          <li><a href="../paginas/integrantes.html" aria-label="Ir para a página de integrantes">Integrantes</a></li>
+          <li><a href="../paginas/contato.html" aria-label="Ir para a página de contato">Contato</a></li>
+          <li><a href="../paginas/clima.html" aria-label="Ir para a página de clima">Clima</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div id="jogo">
+      <div id="info">
         <div id="timer">Tempo: 20</div>
-            <div id="log"></div>
-            <div id="mensagem-final" style="display: none;">
-            <p id="mensagem-texto"></p>
-            <button onclick="reiniciar()">Jogar Novamente!</button>
+        <div id="log"></div>
+        <div id="mensagem-final" style="display: none;">
+          <p id="mensagem-texto"></p>
+          <button onclick="reiniciar()">Jogar Novamente!</button>
         </div>
+      </div>
+      <div class="lixeiras">
+        <img src="./assets/lixo-azul.png" class="lixeira" data-tipo="papel" alt="Lixeira Pixel art Papel" />
+        <img src="./assets/lixo-vermelho.png" class="lixeira" data-tipo="plastico" alt="Lixeira Pixel art Plástico" />
+        <img src="./assets/lixo-verde.png" class="lixeira" data-tipo="vidro" alt="Lixeira Pixel art Vidro" />
+        <img src="./assets/lixo-amarelo.png" class="lixeira" data-tipo="metal" alt="Lixeira Pixel art Metal" />
+        <img src="./assets/lixo-marrom.png" class="lixeira" data-tipo="banana" alt="Lixeira Pixel art Orgânico" />
+      </div>
+      <div class="lixos">
+        <img src="./assets/papel.png" draggable="true" class="lixo" data-tipo="papel" alt="Pixel art Papel" />
+        <img src="./assets/garrafa-plastico.png" draggable="true" class="lixo" data-tipo="plastico"
+          alt="Pixel art garrafa de plástico" />
+        <img src="./assets/garrafa-vidro.png" draggable="true" class="lixo" data-tipo="vidro"
+          alt="Pixel art de garrafa de vidro" />
+        <img src="./assets/lata.png" draggable="true" class="lixo" data-tipo="metal" alt="Pixel art de lata" />
+        <img src="./assets/banana.png" draggable="true" class="lixo" data-tipo="banana" alt="Pixel art de banana" />
+        <img src="./assets/papel.png" draggable="true" class="lixo" data-tipo="papel" alt="Pixel art de papel" />
+        <img src="./assets/garrafa-plastico.png" draggable="true" class="lixo" data-tipo="plastico"
+          alt="Pixel de garrafa de plastico" />
+        <img src="./assets/garrafa-vidro.png" draggable="true" class="lixo" data-tipo="vidro"
+          alt="Pixel de garrafa de vidro" />
+        <img src="./assets/lata.png" draggable="true" class="lixo" data-tipo="metal" alt="Pixel art de lata" />
+        <img src="./assets/banana.png" draggable="true" class="lixo" data-tipo="banana" alt="Pixel art de banana" />
+      </div>
     </div>
-    <div class="lixeiras">
-      <img src="./assets/lixo-azul.png" class="lixeira" data-tipo="papel" alt="Lixeira Pixel art Papel" />
-      <img src="./assets/lixo-vermelho.png" class="lixeira" data-tipo="plastico" alt="Lixeira Pixel art Plástico" />
-      <img src="./assets/lixo-verde.png" class="lixeira" data-tipo="vidro" alt="Lixeira Pixel art Vidro" />
-      <img src="./assets/lixo-amarelo.png" class="lixeira" data-tipo="metal" alt="Lixeira Pixel art Metal" />
-      <img src="./assets/lixo-marrom.png" class="lixeira" data-tipo="banana" alt="Lixeira Pixel art Orgânico" />
-    </div>
-    <div class="lixos">
-      <img src="./assets/papel.png" draggable="true" class="lixo" data-tipo="papel" alt="Pixel art Papel" />
-      <img src="./assets/garrafa-plastico.png" draggable="true" class="lixo" data-tipo="plastico" alt="Pixel art garrafa de plástico" />
-      <img src="./assets/garrafa-vidro.png" draggable="true" class="lixo" data-tipo="vidro" alt="Pixel art de garrafa de vidro" />
-      <img src="./assets/lata.png" draggable="true" class="lixo" data-tipo="metal" alt="Pixel art de lata" />
-      <img src="./assets/banana.png" draggable="true" class="lixo" data-tipo="banana" alt="Pixel art de banana" />
-      <img src="./assets/papel.png" draggable="true" class="lixo" data-tipo="papel" alt="Pixel art de papel" />
-      <img src="./assets/garrafa-plastico.png" draggable="true" class="lixo" data-tipo="plastico" alt="Pixel de garrafa de plastico" />
-      <img src="./assets/garrafa-vidro.png" draggable="true" class="lixo" data-tipo="vidro" alt="Pixel de garrafa de vidro" />
-      <img src="./assets/lata.png" draggable="true" class="lixo" data-tipo="metal" alt="Pixel art de lata" />
-      <img src="./assets/banana.png" draggable="true" class="lixo" data-tipo="banana" alt="Pixel art de banana" />
-    </div>
-  </div>
-</main>
-<footer>
-  <p>Produzido por FLOOD - Copyright 2025 © - Todos os direitos reservados.</p>
-</footer>
+  </main>
+  <footer>
+    <p>Produzido por FLOOD - Copyright 2025 © - Todos os direitos reservados.</p>
+  </footer>
 </body>
+
 </html>

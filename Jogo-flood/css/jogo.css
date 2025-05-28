@@ -13,8 +13,8 @@ body {
   background: url('../img/cenario.png') no-repeat;
   background-size: cover;
   background-position: center;
-  width: 900px;
-  height: 550px;
+  width: 750px;
+  height: 500px;
   border: 2px solid #444; 
   overflow: hidden;
   margin: 20px auto;
@@ -24,7 +24,7 @@ body {
 /*Lixeiras*/
 .lixeiras {
   position: absolute;
-  bottom: 165px;
+  bottom: 175px;
   left: 67%;
   transform: translateX(-50%);
   display:flex;
@@ -80,13 +80,12 @@ body {
   font-weight: bold;
 }
 
-/*Estrutura*/
-
-
 /*Header*/
 header img{
   text-align: left;
   width: 180px;
+  margin-top: 5px;
+  height: auto;
 }
 h1{
   font-size: 45px;
@@ -96,10 +95,10 @@ h1{
 }
 #imgtil{
   display: flex;
-  flex-direction: row;
   width: 100vw;
   flex-direction: column;
-
+  margin-left:20px;
+  gap: 10px;
 }
 header{
   display: flex;
@@ -107,32 +106,39 @@ header{
   justify-content: center;
   width: 100vw;
 }
-nav ul{
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-}
-a{
-  background-color: #6a7bae68;
-  color: white;
-  padding: 20px;
-  text-decoration: none;
-  font-family: Arial;
-  font-size: 18px;
-  font-weight: bold;
-  align-items: center;
-}
-nav{
-  background-color:lightblue;
-}
-
 footer{
-  background-color: #6a7bae68;
-  padding: 5px;
+
+  padding: 4px;
   color: white;
   font-size: 17px;
-  font-family:'Lucida Sans';
+  font-family:Arial;
   text-align: center;
   font-weight: bold;
   height: 3em;
 }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.05rem;
+  font-family: Arial;
+  padding-bottom: 6px;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  border-bottom-color: #80a6d0;
+  outline: none;
+}
+

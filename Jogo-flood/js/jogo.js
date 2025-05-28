@@ -3,21 +3,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const lixeiras = document.querySelectorAll(".lixeira");
   const area = document.querySelector(".lixos");
   const log = document.getElementById("log");
-  const timerDisplay = document.getElementById("timer");
+  const relogio = document.getElementById("timer");
 
-  let tempoRestante = 20;
-  timerDisplay.textContent = `Tempo: ${tempoRestante}s`;
-
-  lixos.forEach((lixo, index) => {
-    lixo.id = `lixo-${index}`;
-    const maxX = area.offsetWidth - lixo.offsetWidth;
-    const maxY = area.offsetHeight - lixo.offsetHeight;
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * maxY);
-    lixo.style.left = `${randomX}px`;
-    lixo.style.top = `${randomY}px`;
-    lixo.style.position = "absolute";
-  });
+  let tempo = 20;
+  relogio.textContent = `Tempo: ${tempo}s`;
+  setTimeout(() => {
+    lixos.forEach((lixo, i) => {
+      lixo.id = `lixo-${i}`;
+      const maxX = Math.max(area.offsetWidth - lixo.offsetWidth, 0);
+      const maxY = Math.max(area.offsetHeight - lixo.offsetHeight, 0);
+      const posX = Math.floor(Math.random() * maxX);
+      const posY = Math.floor(Math.random() * maxY);
+      lixo.style.left = `${posX}px`;
+      lixo.style.top = `${posY}px`;
+      lixo.style.position = "absolute";
+    });
+  }, 50);
 
   lixos.forEach(lixo => {
     lixo.addEventListener("dragstart", e => {
@@ -26,43 +27,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  let separados = 0;
-  const totalLixos = lixos.length;
+  let certos = 0;
+  const total = lixos.length;
 
-  function finalizarJogo(mensagem) {
+  function fimDoJogo(msg) {
     log.textContent = "";
     const mensagemFinal = document.getElementById("mensagem-final");
-    const mensagemTexto = document.getElementById("mensagem-texto");
+    const textoFinal = document.getElementById("mensagem-texto");
 
-    mensagemTexto.textContent = mensagem;
+    textoFinal.textContent = msg;
     mensagemFinal.style.display = "block";
 
     lixeiras.forEach(lixeira => {
-      lixeira.removeEventListener("dragover", dragOverHandler);
-      lixeira.removeEventListener("drop", dropHandler);
+      lixeira.removeEventListener("dragover", permitirSoltar);
+      lixeira.removeEventListener("drop", soltar);
     });
 
-    clearInterval(timerInterval);
+    clearInterval(intervalo);
   }
 
-  function dragOverHandler(e) {
+  function permitirSoltar(e) {
     e.preventDefault();
   }
 
-  function dropHandler(e) {
+  function soltar(e) {
     e.preventDefault();
     const tipoLixo = e.dataTransfer.getData("tipo");
     const idLixo = e.dataTransfer.getData("id");
     const tipoLixeira = e.currentTarget.dataset.tipo;
 
     if (tipoLixo === tipoLixeira) {
-      separados++;
+      certos++;
       log.textContent = "✅ Lixo correto!";
-      const lixoRemovido = document.getElementById(idLixo);
-      if (lixoRemovido) lixoRemovido.remove();
+      const lixo = document.getElementById(idLixo);
+      if (lixo) lixo.remove();
 
-      if (separados === totalLixos) {
-        finalizarJogo("🎉 Alagamento evitado! Você conseguiu a tempo!");
+      if (certos === total) {
+        fimDoJogo("🎉 Alagamento evitado! Você conseguiu a tempo!");
       }
     } else {
       log.textContent = "❌ Lixo errado! Jogue na lata certa.";
@@ -70,23 +71,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   lixeiras.forEach(lixeira => {
-    lixeira.addEventListener("dragover", dragOverHandler);
-    lixeira.addEventListener("drop", dropHandler);
+    lixeira.addEventListener("dragover", permitirSoltar);
+    lixeira.addEventListener("drop", soltar);
   });
 
-  const timerInterval = setInterval(() => {
-    tempoRestante--;
-    timerDisplay.textContent = `Tempo: ${tempoRestante}s`;
+  const intervalo = setInterval(() => {
+    tempo--;
+    relogio.textContent = `Tempo: ${tempo}s`;
 
-    if (tempoRestante <= 0) {
-      finalizarJogo(
-        separados === totalLixos
+    if (tempo <= 0) {
+      fimDoJogo(
+        certos === total
           ? "🎉 Alagamento evitado! Você conseguiu a tempo!"
-          : `⏰ Alagamento não evitada! Você separou ${separados} de ${totalLixos} lixos. Tente de novo!`
+          : `⏰ Alagamento não evitado! Você separou ${certos} de ${total} lixos. Tente de novo!`
       );
     }
   }, 1000);
 });
+
 function reiniciar() {
   location.reload();
 }
+
