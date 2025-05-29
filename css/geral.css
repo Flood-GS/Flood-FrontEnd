@@ -30,7 +30,7 @@ h1{
   font-size: 45px;
   text-align: left;
 }
-#imgtil{
+#imgtitulo{
   display: flex;
   width: 100vw;
   flex-direction: column;
@@ -111,5 +111,34 @@ nav ul li a:focus {
   filter: contrast(2.0);
   cursor: pointer;
 }
-
-
+/*Start*/
+#start {
+  background-color:rgba(55, 64, 71, 0.474);
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: left;
+}
+#start h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#start ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+#start li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+#botaostart {
+  display: block;
+  margin: 30px auto 0;
+  width: 170px;
+  transition: transform 0.2s ease;
+}
+#botaostart:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
