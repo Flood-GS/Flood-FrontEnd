@@ -1,4 +1,4 @@
-/* Cenário */
+/*Estrutura*/
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +6,18 @@ body {
   background-size: cover;
   color: rgb(238, 238, 238);
   font-family:Arial;
+  min-height: 100vh;
+}
+main {
+  padding-bottom: 56px;
+}
+footer{
+  font-size: 17px;
+  font-family:Arial;
+  text-align: center;
+  font-weight: bold;
+  height: 3em;
+  z-index: 1000;
 }
 /*Header*/
 header img{
@@ -30,15 +42,6 @@ header{
   align-items: center;
   justify-content: center;
   width: 99vw;
-}
-footer{
-
-  padding: 4px;
-  font-size: 17px;
-  font-family:Arial;
-  text-align: center;
-  font-weight: bold;
-  height: 3em;
 }
 nav ul {
   list-style: none;
@@ -67,16 +70,46 @@ nav ul li a:focus {
 }
 
 /*Index*/
-.menuindex{
-  background-color: rgba(55, 64, 71, 0.26);
-  width: 165px;
+.continicio {
   display: flex;
-  flex-direction: column;
-  text-align:right ;
-  border-radius: 13px;
+  justify-content: space-between;
+  align-items:center; 
 }
+
+.txtinicio {
+  font-size: 1.6rem;
+  margin-left: 19px;
+ margin-bottom: 140px;
+}
+.txtinicio h2 {
+  font-size: 2.4rem;
+}
+.txtinicio h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.imagincio {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 28px;
+  margin-right: 160px; 
+  margin-top: -90px; 
+}
+.menuindex {
+  background-color: rgba(55, 64, 71, 0.26);
+  width: 170px;
+  height: 170px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
 .menuindex:hover {
   transform: scale(1.05);
-  filter:contrast(2.0);
+  filter: contrast(2.0);
   cursor: pointer;
 }
+
+
