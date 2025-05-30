@@ -19,6 +19,16 @@ footer{
   height: 3em;
   z-index: 1000;
 }
+
+/*Padrão de páginas*/
+#start,.inform , #perguntasfrequentes{
+  background-color:rgba(55, 64, 71, 0.559);
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+
 /*Header*/
 header img{
   text-align: left;
@@ -111,14 +121,7 @@ nav ul li a:focus {
   filter: contrast(2.0);
   cursor: pointer;
 }
-/*Start e inform*/
-#start,.inform{
-  background-color:rgba(55, 64, 71, 0.474);
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 20px 30px;
-  border-radius: 15px;
-}
+/*Start*/
 #start h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -141,6 +144,7 @@ nav ul li a:focus {
   transform: scale(1.05);
   cursor: pointer;
 }
+
 /*Integrantes*/
 .integrantesft{
   width: 300px;
@@ -167,4 +171,28 @@ li a{
 }
 a{
   color: rgb(100, 139, 245);
+}
+
+/*FAQ*/
+.pergunta {
+  background-color: #08254593;
+  color: aliceblue;
+  border-radius: 20px;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  font-size: 17px;
+  cursor: pointer;
+}
+.pergunta::after {
+  font-size: 17px;
+  float: right;
+}
+.resposta {
+  display: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+.resposta.show {
+  display: block;
 }
