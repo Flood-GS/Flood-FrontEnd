@@ -112,13 +112,12 @@ nav ul li a:focus {
   cursor: pointer;
 }
 /*Start*/
-#start {
+#start{
   background-color:rgba(55, 64, 71, 0.474);
   max-width: 700px;
   margin: 40px auto;
   padding: 20px 30px;
   border-radius: 15px;
-  text-align: left;
 }
 #start h2 {
   text-align: center;
@@ -141,4 +140,22 @@ nav ul li a:focus {
 #botaostart:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+/*Integrantes*/
+.integrantesft{
+  width: 300px;
+}
+#integrantes{
+  background-color:rgba(55, 64, 71, 0.226);
+  display:flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-around;
+  text-align: center;
+  font-weight: bold;
+  padding: 35px;
+}
+.botao {
+  width: 60px;
+  margin-right: 10px;
 }
