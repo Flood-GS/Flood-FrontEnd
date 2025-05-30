@@ -111,8 +111,8 @@ nav ul li a:focus {
   filter: contrast(2.0);
   cursor: pointer;
 }
-/*Start*/
-#start{
+/*Start e inform*/
+#start,.inform{
   background-color:rgba(55, 64, 71, 0.474);
   max-width: 700px;
   margin: 40px auto;
@@ -146,10 +146,10 @@ nav ul li a:focus {
   width: 300px;
 }
 #integrantes{
-  background-color:rgba(55, 64, 71, 0.226);
+  background-color:rgba(55, 64, 71, 0.12);
   display:flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 6px;
   justify-content: space-around;
   text-align: center;
   font-weight: bold;
@@ -158,4 +158,10 @@ nav ul li a:focus {
 .botao {
   width: 60px;
   margin-right: 10px;
+}
+
+/*Informações*/
+li a{
+  text-decoration: none;
+  color:white ;
 }
