@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOOD</title>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="icon" href="../img/favicon.ico">
+    <script defer src="../js/chatbot.js"></script>
+    <script defer src="../js/contato.js"></script>
+</head>
+<body>
+    <header>
+        <img src="../img/logo.png" alt="Logo FLOOD-uma casa com água">
+        <div id="imgtitulo">
+          <h1>Contato</h1>
+          <nav aria-label="Menu principal">
+            <ul>
+              <li><a href="../index.html" aria-label="Ir para a página inicial">Página inicial</a></li>
+              <li><a href="../paginas/info.html" aria-label="Ir para a página das informações">Informações</a></li>
+              <li><a href="../paginas/faq.html" aria-label="Ir para a página de FAQ">FAQ</a></li>
+              <li><a href="../paginas/start.html" aria-label="Ir para a página de jogo">Jogo</a></li>
+              <li><a href="../paginas/contato.html" aria-label="Ir para a página de contato">Contato</a></li>
+              <li><a href="../paginas/quiz.html" aria-label="Ir para a página de quiz">Quiz</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <main>
+      <div class="contato">
+        <section>
+            <h2>Precisa de ajuda?</h2>
+            <p>Teve alguma emergência, relato ou comentário sobre enchentes, alagamentos e inundações?preencha seus dados abaixo e retornaremos o mais rápido possível. Estamos aqui para ajudar!</p>
+                <form id="form" aria-label="Formulário para ajuda">
+                <fieldset>
+                <legend>Dados:</legend>
+
+                <div>
+                  <label for="idNome">Nome:</label>
+                  <input type="text" id="idNome" name="nome" placeholder="Digite seu nome" required>
+                  <span id="spanNome" style="display: none;">Nome inválido!</span>
+                </div>
+
+                <div>
+                  <label for="idEmail">E-mail:</label>
+                  <input type="email" id="idEmail" name="email" placeholder="Digite seu e-mail" required maxlength="50">
+                  <span id="spanEmail" style="display: none;">E-mail inválido!</span>
+                </div>
+
+                <div>
+                  <label for="idEstado">Estado:</label>
+                  <input type="text" id="idEstado" name="estado" placeholder="Digite seu estado" required>
+                </div>
+
+                <div>
+                  <label for="idEmergencia">Emergência:</label>
+                  <input type="text" id="idEmergencia" name="emergencia" placeholder="Digite sua emergência" required>
+                </div>
+
+                <div>
+                <button aria-label="Botão de enviar contato" type="submit" id="enviarbt">Enviar!</button>
+                </div>
+                </fieldset>
+            </form>
+            <p>Também temos um email do FLOOD para você entrar em contato:
+                <a href="mailto:globalsolutionflood@gmail.com"
+                aria-label="Enviar e-mail para ADSOS">globalsolutionflood@gmail.com</a>.</p>
+        </section>
+      </div>
+    </main>
+    <footer>
+        <p>Produzido por FLOOD - Copyright 2025 © - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

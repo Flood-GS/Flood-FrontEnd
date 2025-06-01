@@ -21,7 +21,7 @@ footer{
 }
 
 /*Padrão de páginas*/
-#start,.inform , #perguntasfrequentes, .quiz{
+#start,.inform , #perguntasfrequentes, .quiz, .contato{
   background-color:rgba(55, 64, 71, 0.559);
   max-width: 700px;
   margin: 40px auto;
@@ -173,13 +173,13 @@ a{
   color: rgb(100, 139, 245);
 }
 
-/*FAQ*/
-.pergunta , .answer-btn  {
+/*FAQ e contato*/
+.pergunta , .answer-btn, input  {
   background-color: #08254593;
   color: aliceblue;
   border-radius: 20px;
-  padding: 12px;
-  width: 100%;
+  padding: 10px;
+  width: 98%;
   text-align: left;
   font-size: 17px;
   cursor: pointer;
@@ -196,8 +196,8 @@ a{
 .resposta.show {
   display: block;
 }
-/*Quiz*/
-#proxima , #reiniciar {
+/*Quiz e contato*/
+#proxima , #reiniciar, #enviarbt {
   padding: 10px 20px;
   margin-top: 20px;
   border: none;
