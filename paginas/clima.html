@@ -10,37 +10,46 @@
     <script defer src="../js/chatbot.js"></script>
     <script defer src="../js/clima.js"></script>
 </head>
+
 <body>
     <header>
-        <img src="../img/logo.png" alt="Logo FLOOD-uma casa com água">
+        <img src="../img/logo.png" alt="Logo FLOOD - uma casa com água">
         <div id="imgtitulo">
-          <h1>Contato</h1>
-          <nav aria-label="Menu principal">
-            <ul>
-              <li><a href="../index.html" aria-label="Ir para a página inicial">Página inicial</a></li>
-              <li><a href="../paginas/info.html" aria-label="Ir para a página das informações">Informações</a></li>
-              <li><a href="../paginas/faq.html" aria-label="Ir para a página de FAQ">FAQ</a></li>
-              <li><a href="../paginas/start.html" aria-label="Ir para a página de jogo">Jogo</a></li>
-              <li><a href="../paginas/integrantes.html" aria-label="Ir para a página de integrantes">Integrantes</a></li>
-              <li><a href="../paginas/quiz.html" aria-label="Ir para a página de quiz">Quiz</a></li>
-              <li><a href="../paginas/contato.html" aria-label="Ir para a página de contato">Contato</a></li>
-            </ul>
-          </nav>
+            <h1>Clima</h1>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="../index.html" aria-label="Ir para a página inicial">Página inicial</a></li>
+                    <li><a href="../paginas/info.html" aria-label="Ir para a página das informações">Informações</a></li>
+                    <li><a href="../paginas/faq.html" aria-label="Ir para a página de FAQ">FAQ</a></li>
+                    <li><a href="../paginas/start.html" aria-label="Ir para a página de jogo">Jogo</a></li>
+                    <li><a href="../paginas/integrantes.html" aria-label="Ir para a página de integrantes">Integrantes</a></li>
+                    <li><a href="../paginas/quiz.html" aria-label="Ir para a página de quiz">Quiz</a></li>
+                    <li><a href="../paginas/contato.html" aria-label="Ir para a página de contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-      </header>
+    </header>
+
     <main>
-      <div class="clima">
-        <section>
-            <h2>Clima:</h2>
+        <section class="clima">
+            <h2>Consulta de Clima</h2>
             <p>Digite o nome da cidade para saber se haverá chuva:</p>
-            <input type="text" id="idClima" name="clima" placeholder="Digite o nome de sua cidade" required>
-            <div id="resultado"></div>
-            <button id="climabtn" onclick="monitorarClima()">Consultar</button>
+            <form id="climaForm" aria-label="Formulário de consulta de clima">
+                <div>
+                    <label for="idClima">Cidade:</label>
+                    <input type="text" id="idClima" name="clima" placeholder="Digite o nome de sua cidade" required>
+                </div>
+                <div>
+                    <button type="button" id="climabtn" onclick="monitorarClima()" aria-label="Consultar previsão do clima">Consultar</button>
+                </div>
+            </form>
+            <div id="resultado" aria-live="polite"></div>
         </section>
-      </div>
     </main>
+
     <footer>
         <p>Produzido por FLOOD - Copyright 2025 © - Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>

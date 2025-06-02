@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(../../img/background.png);
+  background-image: url(../img/background.png);
   background-size: cover;
   color: rgb(238, 238, 238);
   font-family:Arial;
