@@ -140,4 +140,144 @@ nav ul li a:focus {
   border-bottom-color: #80a6d0;
   outline: none;
 }
+@media (max-width: 2560px) {
+  #jogo {
+    width: 1300px;
+    height: 700px;
+  }
+  .lixeiras {
+    bottom: 225px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .lixeira {
+    height: 120px;
+  }
+}
 
+@media (max-width: 1440px) {
+  #jogo {
+    width: 650px;
+    height: 430px;
+  }
+  .lixeiras {
+    bottom: 151px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .lixeira {
+    height: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #jogo {
+    width: 550px;
+    height: 380px;
+  }
+  nav ul {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .lixeiras {
+    bottom: 132px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .lixeira {
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  header img {
+    width: 120px;
+  }
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  #imgtitulo {
+    margin-left: 10px;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+  }
+  #jogo {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 4 / 3; 
+  }
+  .lixeiras {
+    bottom: 184px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .lixeira {
+    height: 70px;
+  }
+}
+
+@media (max-width: 425px) {
+  h1 {
+    font-size: 24px;
+  }
+  #jogo {
+    width: 95%;
+    aspect-ratio: 4 / 3;
+  }
+  .lixeiras {
+    bottom: 105px;
+  }
+  .lixeira {
+    height: 60px;
+  }
+  #info {
+    font-size: 12px;
+    padding: 6px;
+  }
+  #timer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 20px;
+  }
+  #jogo {
+    width: 100%;
+  }
+  .lixeiras {
+    bottom: 98px;
+  }
+  .lixeira {
+    height: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+  nav ul li a {
+    font-size: 0.85rem;
+  }
+  #info {
+    font-size: 10px;
+    padding: 5px;
+  }
+  #jogo {
+    width: 100%;
+  }
+  .lixeiras {
+    bottom: 83px;
+  }
+  .lixeira {
+    height: 45px;
+  }
+}

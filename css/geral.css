@@ -212,3 +212,113 @@ a{
   margin-top: 20px;
   font-size: 1.2em;
 }
+
+@media (max-width: 1440px) {
+  .imagincio {
+    grid-template-columns: repeat(3, auto);
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .continicio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .txtinicio {
+    margin: 20px 0;
+  }
+  .imagincio {
+    margin: 0;
+    grid-template-columns: repeat(3, auto);
+  }
+  nav ul {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  header img {
+    width: 120px;
+  }
+  .imagincio {
+    grid-template-columns: 1fr;
+  }
+  .menuindex {
+    width: 140px;
+    height: 140px;
+  }
+  .txtinicio h2 {
+    font-size: 1.8rem;
+  }
+  .txtinicio h3 {
+    font-size: 1rem;
+  }
+  #integrantes {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .integrantesft {
+    width: 200px;
+  }
+}
+
+@media (max-width: 425px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menuindex {
+    width: 120px;
+    height: 120px;
+  }
+  .txtinicio {
+    font-size: 1.2rem;
+  }
+  .txtinicio h2 {
+    font-size: 1.5rem;
+  }
+  .txtinicio h3 {
+    font-size: 0.9rem;
+  }
+  #start, .inform, #perguntasfrequentes, .quiz, .contato, .clima {
+    margin: 20px auto;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .menuindex {
+    width: 100px;
+    height: 100px;
+  }
+  .txtinicio h2 {
+    font-size: 1.3rem;
+  }
+  .txtinicio h3 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+  .menuindex {
+    width: 90px;
+    height: 90px;
+  }
+  #botaostart {
+    width: 140px;
+  }
+}
