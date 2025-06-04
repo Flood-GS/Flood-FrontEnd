@@ -60,9 +60,9 @@ O projeto foi construído utilizando as seguintes tecnologias:
 ---
 
 ## 👥 Integrantes do ADSOS
-- Amandha Yumi Toyota Artulino - RM: 563549
-- Giovanna Bardella Gomes - RM: 561439
-- Erick Takeshi Nakajune - RM: 566059
+- Amandha Yumi Toyota Artulino - RM: 563549  - 1TDSPJ
+- Giovanna Bardella Gomes - RM: 561439 - 1TDSPJ
+- Erick Takeshi Nakajune - RM: 566059 - 1TDSPJ
 
 ---
 
